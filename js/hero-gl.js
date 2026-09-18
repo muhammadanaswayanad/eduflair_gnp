@@ -52,9 +52,9 @@
         '  float orbs = exp(-12.0 * length(uv - o1)) * 0.38 + exp(-10.0 * length(uv - o2)) * 0.28;',
         '  if (u_mobile > 0.5) orbs *= 0.65;',
         '  float glow = bands + orbs;',
-        '  vec3 teal = vec3(0.18, 0.78, 0.72);',
-        '  vec3 mint = vec3(0.60, 0.96, 0.89);',
-        '  vec3 col = mix(teal, mint, clamp(orbs * 1.4, 0.0, 1.0));',
+        '  vec3 cerulean = vec3(0.090, 0.506, 0.635);',
+        '  vec3 gold = vec3(0.992, 0.718, 0.188);',
+        '  vec3 col = mix(cerulean, gold, clamp(orbs * 1.4, 0.0, 1.0));',
         '  gl_FragColor = vec4(col, glow * 0.62);',
         '}'
     ].join('\n'));
