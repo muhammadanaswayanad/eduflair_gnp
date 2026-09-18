@@ -79,6 +79,14 @@
         .frame-zoom { overflow: hidden; }
         .frame-zoom img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .crop-convocation img { object-position: center 22%; }
+        .crop-nurse img { object-position: center 18%; }
+        .crop-portrait img { object-position: center 15%; }
+        .crop-classroom img { object-position: center 40%; }
+        .social-icon {
+            color: rgba(255, 255, 255, 0.88);
+            transition: color 0.18s ease, transform 0.18s ease;
+        }
+        .social-icon:hover { color: #FDB730; transform: translateY(-2px); }
         @media (hover: hover) and (pointer: fine) {
             .lift-card {
                 transition: transform 0.22s cubic-bezier(.2,.8,.2,1), box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
@@ -124,10 +132,10 @@
         @media (prefers-reduced-motion: reduce) {
             .pulse-line { animation: none; }
             #hero-gl { display: none; }
-            .lift-card, .btn-glow, .nav-cta, .path-chip, .stat-tile, .frame-zoom img, .faq-card {
+            .lift-card, .btn-glow, .nav-cta, .path-chip, .stat-tile, .frame-zoom img, .faq-card, .social-icon {
                 transition: none !important;
             }
-            .lift-card:hover, .btn-glow:hover, .nav-cta:hover, .path-chip:hover, .stat-tile:hover {
+            .lift-card:hover, .btn-glow:hover, .nav-cta:hover, .path-chip:hover, .stat-tile:hover, .social-icon:hover {
                 transform: none;
             }
             .frame-zoom:hover img { transform: none; }
@@ -192,14 +200,14 @@
                         </ul>
                     </div>
                     <div class="grid grid-cols-3 gap-3 max-w-lg">
-                        <figure class="frame-zoom rounded-2xl h-24 border border-white/15">
-                            <img src="images/eduflair-life-8.jpeg" alt="Eduflair campus batch — world's largest language campus" width="400" height="96">
+                        <figure class="frame-zoom crop-nurse rounded-2xl h-24 border border-white/15">
+                            <img src="images/gnp-nurse-anusha.jpg" alt="Anusha, a qualified nurse, speaking about German Nursing Placement at Eduflair" width="400" height="96">
                         </figure>
-                        <figure class="frame-zoom rounded-2xl h-24 border border-white/15">
-                            <img src="images/eduflair-life-2.jpeg" alt="Eduflair students celebrating on campus at Gradiefesta" width="400" height="96">
+                        <figure class="frame-zoom crop-portrait rounded-2xl h-24 border border-white/15">
+                            <img src="images/gnp-nurse-flerrine.jpg" alt="Flerrine, a German B2 nursing candidate, in counselling at Eduflair" width="400" height="96">
                         </figure>
-                        <figure class="frame-zoom rounded-2xl h-24 border border-white/15">
-                            <img src="images/eduflair-life-4.jpeg" alt="Campus life at Eduflair language institute" width="400" height="96">
+                        <figure class="frame-zoom crop-classroom rounded-2xl h-24 border border-white/15">
+                            <img src="images/DSC01527-1-924x520.jpg" alt="German language classroom at Eduflair for nursing candidates" width="400" height="96">
                         </figure>
                     </div>
                 </div>
@@ -276,7 +284,7 @@
             </div>
             <div class="grid lg:grid-cols-12 gap-6 items-stretch">
                 <figure class="frame-zoom lg:col-span-5 rounded-3xl h-56 sm:h-72 lg:h-full lg:min-h-[28rem] border border-cerulean/15">
-                    <img src="images/DSC06788.JPG" alt="Eduflair placement counsellors preparing German Nursing Placement files" width="800" height="520">
+                    <img src="images/gnp-b2-counselling.jpg" alt="German Nursing Placement counselling with a qualified nurse at Eduflair" width="800" height="520">
                 </figure>
                 <div class="lg:col-span-7 grid gap-6">
                     <article class="lift-card bg-white rounded-2xl p-7 border border-cerulean/15 shadow-sm">
@@ -305,8 +313,8 @@
             <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Language gate</p>
             <h2 class="text-3xl sm:text-4xl font-extrabold mb-3">You must pass 4 modules in German B2</h2>
             <p class="text-white/70 text-lg max-w-2xl mb-8">Hospitals in Germany expect B2 across every skill — not a partial certificate. Eduflair prepares you for all four if you don’t have them yet.</p>
-            <figure class="frame-zoom rounded-3xl h-48 sm:h-64 mb-8 border border-white/10">
-                <img src="images/eduflair-life-7.jpeg" alt="Eduflair language candidates with certificates after completing German modules" width="924" height="256" loading="lazy">
+            <figure class="frame-zoom crop-classroom rounded-3xl h-48 sm:h-64 mb-8 border border-white/10">
+                <img src="images/DSC01527-1-924x520.jpg" alt="German B2 classroom at Eduflair — reading, writing, listening and speaking modules" width="924" height="256" loading="lazy">
             </figure>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <article class="lift-card lift-dark rounded-2xl bg-white/5 border border-white/10 p-6">
@@ -404,17 +412,17 @@
                 <img src="images/hero-eduflair.jpg" alt="Eduflair Gradiefesta convocation — world's largest language campus" width="1200" height="320" loading="lazy">
             </figure>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <figure class="frame-zoom crop-classroom rounded-2xl h-44 border border-cerulean/15">
+                    <img src="images/eduflair-life-8.jpeg" alt="German language batch on the Eduflair campus" width="400" height="176" loading="lazy">
+                </figure>
                 <figure class="frame-zoom rounded-2xl h-44 border border-cerulean/15">
-                    <img src="images/eduflair-life-1.jpeg" alt="Campus stage at Eduflair Gradiefesta" width="400" height="176" loading="lazy">
+                    <img src="images/DSC06788.JPG" alt="Placement desk at Eduflair preparing German Nursing Placement files" width="400" height="176" loading="lazy">
                 </figure>
                 <figure class="frame-zoom rounded-2xl h-44 border border-cerulean/15">
                     <img src="images/eduflair-life-2.jpeg" alt="Students celebrating campus life at Eduflair" width="400" height="176" loading="lazy">
                 </figure>
                 <figure class="frame-zoom rounded-2xl h-44 border border-cerulean/15">
-                    <img src="images/eduflair-life-4.jpeg" alt="Eduflair campus vibe with students and faculty" width="400" height="176" loading="lazy">
-                </figure>
-                <figure class="frame-zoom rounded-2xl h-44 border border-cerulean/15">
-                    <img src="images/eduflair-life-8.jpeg" alt="Batch photo on the Eduflair language campus" width="400" height="176" loading="lazy">
+                    <img src="images/DSC06782.JPG" alt="Eduflair campus counselling floor with certificates and convocation photos" width="400" height="176" loading="lazy">
                 </figure>
             </div>
         </div>
@@ -460,12 +468,24 @@
                     <span class="text-white/30">·</span>
                     <a href="https://www.eduflair.com" target="_blank" rel="noopener noreferrer" class="hover:text-white">eduflair.com</a>
                 </p>
-                <div class="flex justify-center gap-5 pt-6">
-                    <a href="https://in.linkedin.com/company/eduflair-learning-solutions" target="_blank" rel="noopener noreferrer" class="hover:text-white">LinkedIn</a>
-                    <a href="https://www.instagram.com/eduflairlearningsolutions/?hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-white">Instagram</a>
-                    <a href="https://www.facebook.com/eduflairlearningsolutions.pvt.ltd/" target="_blank" rel="noopener noreferrer" class="hover:text-white">Facebook</a>
-                    <a href="https://www.youtube.com/@eduflairlearningsolutions" target="_blank" rel="noopener noreferrer" class="hover:text-white">YouTube</a>
-                </div>
+                <nav class="flex justify-center items-center gap-5 pt-6" aria-label="Eduflair Global Nurses social">
+                    <a href="https://in.linkedin.com/company/eduflair-learning-solutions" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Eduflair on LinkedIn">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/eduflairglobalnurses/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Eduflair Global Nurses on Instagram">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/eduflairlearningsolutions.pvt.ltd/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Eduflair on Facebook">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@EduflairGlobalNurses" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Eduflair Global Nurses on YouTube">
+                        <span class="sr-only">YouTube</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                </nav>
                 <p class="pt-8 text-white/40 text-xs">© 2026 Eduflair Learning Solutions Pvt. Ltd.</p>
             </div>
         </div>
