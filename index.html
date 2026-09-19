@@ -24,13 +24,14 @@
     <link rel="apple-touch-icon" href="https://eduflair.com/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
+                    fontFamily: { sans: ['Open Sans', 'system-ui', 'sans-serif'] },
+                    fontWeight: { medium: '700', semibold: '700', bold: '700', extrabold: '800' },
                     colors: {
                         gold: '#FDB730',
                         cerulean: '#1781A2',
@@ -43,6 +44,28 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
+        body { font-weight: 700; }
+        .event-logo-card {
+            background: #F4F7F8;
+            border: 1px solid rgba(23, 129, 162, 0.15);
+            border-radius: 1rem;
+            height: 7.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 1rem;
+        }
+        .event-logo-card img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+        @media (min-width: 640px) {
+            .event-logo-card { height: 8.5rem; }
+        }
         .hero-grid {
             background-image:
                 radial-gradient(ellipse 80% 60% at 10% 0%, rgba(23, 129, 162, 0.28), transparent 55%),
@@ -143,7 +166,7 @@
     </style>
 </head>
 
-<body class="bg-[#F4F7F8] text-sherpa antialiased selection:bg-gold/40 selection:text-sherpa">
+<body class="bg-[#F4F7F8] text-sherpa antialiased font-sans font-bold selection:bg-gold/40 selection:text-sherpa">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7VXCBQ9"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
@@ -151,7 +174,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-[4.5rem] flex items-center justify-between gap-3">
             <div class="flex items-center gap-3 min-w-0">
                 <img src="images/logo-black.png" alt="Eduflair" class="h-9 sm:h-10 w-auto">
-                <span class="hidden sm:inline text-[10px] lg:text-[11px] font-bold uppercase tracking-widest text-cerulean border-l border-cerulean/25 pl-3 leading-tight">World's largest language campus</span>
+                <img src="images/worlds-largest-language-campus.webp" alt="World's largest language campus" width="1024" height="193" class="hidden sm:block h-7 sm:h-8 lg:h-9 w-auto border-l border-cerulean/25 pl-3">
             </div>
             <div class="flex items-center gap-2 sm:gap-3">
                 <a href="tel:+918353010101" class="hidden lg:inline-flex items-center text-sm font-semibold text-sherpa hover:text-cerulean">+91 8353 01 01 01</a>
@@ -206,13 +229,13 @@
                     </div>
                     <div class="grid grid-cols-3 gap-3 max-w-lg">
                         <figure class="frame-zoom crop-gathering rounded-2xl h-24 border border-white/15">
-                            <img src="images/eduflair-life-4.jpeg" alt="Eduflair campus gathering — students together on the language campus" width="400" height="96">
+                            <img src="images/class-smiles.webp" alt="Eduflair campus gathering — students together on the language campus" width="1800" height="1200">
                         </figure>
                         <figure class="frame-zoom crop-group rounded-2xl h-24 border border-white/15">
-                            <img src="images/eduflair-life-8.jpeg" alt="German language batch in an Eduflair classroom" width="400" height="96">
+                            <img src="images/class-lecture.webp" alt="German language batch in an Eduflair classroom" width="1800" height="1200">
                         </figure>
                         <figure class="frame-zoom crop-classroom rounded-2xl h-24 border border-white/15">
-                            <img src="images/DSC01527-1-924x520.jpg" alt="German language classroom at Eduflair for nursing candidates" width="400" height="96">
+                            <img src="images/class-facing.webp" alt="German language classroom at Eduflair for nursing candidates" width="1800" height="1200">
                         </figure>
                     </div>
                 </div>
@@ -289,7 +312,7 @@
             </div>
             <div class="grid lg:grid-cols-12 gap-6 items-stretch">
                 <figure class="frame-zoom crop-classroom lg:col-span-5 rounded-3xl h-56 sm:h-72 lg:h-full lg:min-h-[28rem] border border-cerulean/15">
-                    <img src="images/eduflair-life-7.jpeg" alt="Eduflair campus award group — qualified candidates for German Nursing Placement" width="800" height="520">
+                    <img src="images/class-group.webp" alt="Qualified candidates training together at Eduflair for German Nursing Placement" width="1800" height="1273">
                 </figure>
                 <div class="lg:col-span-7 grid gap-6">
                     <article class="lift-card bg-white rounded-2xl p-7 border border-cerulean/15 shadow-sm">
@@ -319,7 +342,7 @@
             <h2 class="text-3xl sm:text-4xl font-extrabold mb-3">You must pass 4 modules in German B2</h2>
             <p class="text-white/70 text-lg max-w-2xl mb-8">Hospitals in Germany expect B2 across every skill — not a partial certificate. Eduflair prepares you for all four if you don’t have them yet.</p>
             <figure class="frame-zoom crop-classroom rounded-3xl h-48 sm:h-64 mb-8 border border-white/10">
-                <img src="images/DSC01527-1-924x520.jpg" alt="German B2 classroom at Eduflair — reading, writing, listening and speaking modules" width="924" height="256" loading="lazy">
+                <img src="images/class-worldmap.webp" alt="German B2 classroom at Eduflair — reading, writing, listening and speaking modules" width="1800" height="1273" loading="lazy">
             </figure>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <article class="lift-card lift-dark rounded-2xl bg-white/5 border border-white/10 p-6">
@@ -414,20 +437,41 @@
             <h2 class="text-3xl sm:text-4xl font-extrabold mb-2">Campus and stories</h2>
             <p class="text-cerulean font-bold mb-8">Eduflair - World's largest language campus</p>
             <figure class="frame-zoom crop-convocation rounded-3xl h-56 sm:h-80 border border-cerulean/15 mb-6">
-                <img src="images/hero-eduflair.jpg" alt="Eduflair Gradiefesta convocation — world's largest language campus" width="1200" height="320" loading="lazy">
+                <img src="images/hero-eduflair.webp" alt="Eduflair Gradiefesta convocation — world's largest language campus" width="1456" height="692" loading="lazy">
             </figure>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <figure class="frame-zoom crop-classroom rounded-2xl h-44 border border-cerulean/15">
-                    <img src="images/eduflair-life-8.jpeg" alt="German language batch on the Eduflair campus" width="400" height="176" loading="lazy">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                <figure class="event-logo-card">
+                    <img src="images/events/event-gradiesta.webp" alt="Gradiesta 4.0" width="900" height="507" loading="lazy">
                 </figure>
-                <figure class="frame-zoom rounded-2xl h-44 border border-cerulean/15">
-                    <img src="images/DSC06788.JPG" alt="Placement desk at Eduflair preparing German Nursing Placement files" width="400" height="176" loading="lazy">
+                <figure class="event-logo-card">
+                    <img src="images/events/event-melanam.webp" alt="Campus festival" width="900" height="507" loading="lazy">
                 </figure>
-                <figure class="frame-zoom rounded-2xl h-44 border border-cerulean/15">
-                    <img src="images/eduflair-life-2.jpeg" alt="Students celebrating campus life at Eduflair" width="400" height="176" loading="lazy">
+                <figure class="event-logo-card">
+                    <img src="images/events/event-onam.webp" alt="Onam 2026" width="900" height="507" loading="lazy">
                 </figure>
-                <figure class="frame-zoom rounded-2xl h-44 border border-cerulean/15">
-                    <img src="images/DSC06782.JPG" alt="Eduflair campus counselling floor with certificates and convocation photos" width="400" height="176" loading="lazy">
+                <figure class="event-logo-card">
+                    <img src="images/events/event-frostveil.webp" alt="Frostveil" width="900" height="507" loading="lazy">
+                </figure>
+                <figure class="event-logo-card">
+                    <img src="images/events/event-boobash.webp" alt="Halloween BooBash Party" width="900" height="624" loading="lazy">
+                </figure>
+                <figure class="event-logo-card">
+                    <img src="images/events/event-oktoberfest.webp" alt="Oktober Fest 2K26" width="900" height="535" loading="lazy">
+                </figure>
+                <figure class="event-logo-card">
+                    <img src="images/events/event-word-buster.webp" alt="German Word Buster" width="900" height="558" loading="lazy">
+                </figure>
+                <figure class="event-logo-card">
+                    <img src="images/events/event-redekunst.webp" alt="Redekunst — elocution competition in German" width="900" height="590" loading="lazy">
+                </figure>
+                <figure class="event-logo-card">
+                    <img src="images/events/event-aufbruch.webp" alt="Aufbruch — the grand flying ceremony" width="900" height="598" loading="lazy">
+                </figure>
+                <figure class="event-logo-card">
+                    <img src="images/events/event-pflegestamme.webp" alt="Pflegestämme" width="900" height="507" loading="lazy">
+                </figure>
+                <figure class="event-logo-card">
+                    <img src="images/events/event-orientation.webp" alt="German language orientation" width="900" height="507" loading="lazy">
                 </figure>
             </div>
         </div>

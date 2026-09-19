@@ -19,13 +19,14 @@
     <link rel="apple-touch-icon" href="https://eduflair.com/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
+                    fontFamily: { sans: ['Open Sans', 'system-ui', 'sans-serif'] },
+                    fontWeight: { medium: '700', semibold: '700', bold: '700', extrabold: '800' },
                     colors: {
                         gold: '#FDB730',
                         cerulean: '#1781A2',
@@ -38,13 +39,14 @@
     </script>
 </head>
 
-<body class="bg-[#F4F7F8] text-sherpa antialiased min-h-screen flex flex-col">
+<body class="bg-[#F4F7F8] text-sherpa antialiased font-sans font-bold min-h-screen flex flex-col">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7VXCBQ9"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header class="bg-white border-b border-cerulean/15">
-        <div class="max-w-3xl mx-auto px-4 py-4 flex justify-center">
+        <div class="max-w-3xl mx-auto px-4 py-4 flex justify-center items-center gap-3">
             <img src="images/logo-black.png" alt="Eduflair" class="h-10 w-auto">
+            <img src="images/worlds-largest-language-campus.webp" alt="World's largest language campus" width="1024" height="193" class="h-8 w-auto border-l border-cerulean/25 pl-3">
         </div>
     </header>
 
