@@ -731,6 +731,7 @@
 
                 const getLeadPromise = fetch(getLeadUrl, { method: 'POST', mode: 'no-cors' });
 
+                formData.append('url', window.location.href);
                 const gasPromise = fetch(GOOGLE_APPS_SCRIPT_URL, {
                     method: 'POST',
                     body: formData,
